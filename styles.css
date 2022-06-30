@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --mid-cyan: hsl(179, 47%, 52%);
+}
+body {
+  background: var(--light-gray);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+}
+.card {
+  width: 310px;
+}
+
+.first-grid {
+  padding: 25px;
+  height: 265px;
+}
+.second-grid,
+.third-grid {
+  padding: 25px;
+  height: 225px;
+}
+.first-grid {
+  margin-top: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px 5px 0 0;
+}
+.first-grid h1,
+.second-grid h1,
+.third-grid h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.first-grid h1 {
+  color: var(--cyan);
+}
+.second-grid,
+.third-grid {
+  color: #fff;
+}
+
+.first-grid p:nth-child(2) {
+  font-weight: 700;
+  color: var(--bright-yellow);
+}
+.first-grid p:nth-child(3) {
+  line-height: 26px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+.second-grid {
+  background-color: var(--cyan);
+}
+.third-grid {
+  background-color: var(--mid-cyan);
+  border-radius: 0 0 5px 5px;
+}
+.second-grid,
+.third-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.second-grid div {
+  display: flex;
+  align-items: center;
+}
+.second-grid p:nth-child(1) {
+  font-size: 33px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.second-grid p:nth-child(2) {
+  font-weight: 200;
+  color: var(--light-gray);
+}
+button {
+  width: 260px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--bright-yellow);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 50px 1px #26a2a0;
+}
+ul {
+  padding-top: 20px;
+}
+ul li {
+  list-style: none;
+  line-height: 20px;
+  font-weight: 200;
+}
+@media only screen and (min-width: 700px) {
+  .card {
+    width: 630px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  }
+  .first-grid {
+    margin-top: 0;
+    grid-column: 1/-1;
+    height: auto;
+  }
+  .second-grid,
+  .third-grid {
+    height: 255px;
+  }
+  .second-grid {
+    border-radius: 0 0 0 5px;
+  }
+  .third-grid {
+    border-bottom-left-radius: 0;
+  }
+}
